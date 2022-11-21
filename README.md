@@ -6,5 +6,7 @@ In the interests of assisting and accelerating the processes of using bacteria t
 ## Results
 The requested/described dashboard was designed using javascript and, via HTML, presented as a web page which can be accessed at the following location:
 
+ https://scruffy-bearie.github.io/BBB2/
+
 ## Analysis
 Wherein the page produced meets the design requirements specified in the project outline, the researcher/analyst believes that the usefulness of the website is limited given the objectives of the overall project.  It seems like it would have been far more useful to design a dashboard that allowed one to search on a given bacterial species for sake of identifying those individuals in which the particular species was found along with a summary of the relative bacterial counts.  As such, it would have been possible, had a candidate bacterial species been identified, to determine if that species were present among individuals participating in the trial.
