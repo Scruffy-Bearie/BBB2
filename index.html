@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+       />
+    <link rel="stylesheet" href="style.css"
+          />
+
+
+
+<body class = bg-white>
+    
+    <div class="jumbotron">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <h4>Use the interactive charts below to explore the dataset</h4>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <h2>Project Overview</h2>
+        <h6>In the interests of assisting and accelerating the processes of using bacteria to synthesize the proteins found in meat, researchers have been cataloguing data pertaining to the bacterial species found within the belly buttons of individuals participating in a clinical trial.  The purpose of this project was to create a “web page dashboard” wherein the “ID” of a specific individual could be selected and a bar graph displaying the 10 most common bacteria found in their belly button, a gauge indicating their frequency of belly button scrubbing and a bubble chart displaying the relative amounts of all bacterial species found in their belly button would be displayed.</h6>
+        </div>
+    </div>
+
+    <div class = "row">
+      <p></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+          <div class="well">
+            <h5>Test Subject ID No.:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </div>
+          <div>
+            <p></p>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Demographic Info</h3>
+            </div>            
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div id="bar"></div>
+          <h6>Figure 1: Top 10 Bacterial Species as a Function of Bacterial Count<br>
+             Once a specific ID has been selected, this figure displays the realtive amounts of the 10 most abundant bacterial species found in the specified inidividuas belly button.</h6>
+        </div>
+        
+        <div class="col-md-4">
+          <div id="gauge"></div>
+          <h6>Figure 2: Belly Button Washing Frequency<br>
+             Once a specific ID has been selected, this figure indicates via the position of a black indicator band, the number of times per week the specified individual thoroughly scrubs their belly button.</h6>
+        </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <h6>Figure 3: Relative Bacterial Count as a Function of OTU ID<br>
+           Once a specific ID has been selected, the chart displays a marker for each bacterial species found in the individual's belly button where the size of the marker represents the relative count of the specific bacterial species.</h6>
+      </div>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+    <script src="charts.js"></script>  
+
+</body>
+</html>
